@@ -779,10 +779,10 @@ ngx_http_ipip_handler(ngx_http_request_t *r)
         return rc;
     }
 
-    if (ngx_strncasecmp(r->uri.data, (u_char *)"/i-ip", 5) == 0) {
+    if (ngx_strncasecmp(r->uri.data, (u_char *)"/oip", 4) == 0) {
         return ngx_http_ipip_ip_handler(r);
 
-    } else if (ngx_strncasecmp(r->uri.data, (u_char *)"/i-phone", 8) == 0){
+    } else if (ngx_strncasecmp(r->uri.data, (u_char *)"/ophone", 7) == 0){
         return ngx_http_ipip_phone_handler(r);
 
     } else {
