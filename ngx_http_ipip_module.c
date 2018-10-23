@@ -582,7 +582,7 @@ ngx_http_ipip_ip_handler(ngx_http_request_t *r)
          * remember to free by cJSON_Delete
          */
         root = cJSON_CreateObject();
-        cJSON_AddStringToObject(root, "ret", "ok");
+        cJSON_AddNumberToObject(root, "code", 0);
         cJSON_AddItemToObject(root, "data", data = cJSON_CreateArray());
 
         lastp = p = result;
